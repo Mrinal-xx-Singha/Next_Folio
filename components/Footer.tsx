@@ -44,7 +44,6 @@ const Footer = () => {
             "
           >
             <Link  href={profile.link}>
-            // eslint-disable-next-line @next/next/no-img-element
             <img src={profile.img} alt="icons" width={20} height={20} />
             </Link>
           </div>
