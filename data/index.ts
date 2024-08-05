@@ -1,4 +1,3 @@
-import Link from "next/link";
 
 export const navItems = [
   { name: "About", link: "#about" },

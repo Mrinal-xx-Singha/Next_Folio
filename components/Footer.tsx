@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
@@ -43,7 +45,8 @@ const Footer = () => {
             "
           >
             <Link  href={profile.link}>
-            <img src={profile.img} alt={profile.id} width={20} height={20} />
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={profile.img} alt="icons" width={20} height={20} />
             </Link>
           </div>
         ))}
