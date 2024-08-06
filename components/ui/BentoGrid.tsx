@@ -9,6 +9,7 @@ import { useState } from "react";
 import animationData from "@/data/confetti.json"
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
+import { setTimeout } from "timers";
 
 export const BentoGrid = ({
   className,
@@ -52,7 +53,23 @@ export const BentoGridItem = ({
 }) => {
 
   const [copied,setCopied] =useState(false)
+  const [copiedResume,setCopiedResume] =useState(false)
 
+  const resumeLink = "https://drive.google.com/file/d/1xl8YvJvtN6hPWwISO99c9xwvkt0wTurT/view?usp=sharing"
+
+  const handleCopyResume = ()=>{
+    navigator.clipboard.writeText(resumeLink)
+    .then(() =>{
+      setCopiedResume(true);
+      setTimeout(()=>{
+        setCopiedResume(false)
+      },2000) //reset the copied state after 2 seconds
+    })
+    .catch(err => {
+      console.log('Failed to coppy: ',err);
+      
+    })
+  }
 
   const handleCopy =()=>{
     navigator.clipboard.writeText('mrinalsingha17@gmail.com')
@@ -169,6 +186,13 @@ export const BentoGridItem = ({
               position="left"
               otherClasses="!bg-[#161a31]"
               handleClick={handleCopy}
+              />
+              <MagicButton
+              title={copiedResume ? "Resume Copied" : "Copy my resume"}
+              icon={<IoCopyOutline />}
+              position="left"
+               otherClasses="!bg-[#161a31]"
+               handleClick={handleCopyResume}
               />
             </div>
           )}

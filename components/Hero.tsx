@@ -44,7 +44,7 @@ const Hero = () => {
           </p>
 
 
-          <a href="#About">
+          <a href="https://github.com/Mrinal-xx-Singha">
             <MagicButton
             icon = {<FaLocationArrow />}
             position="right"
