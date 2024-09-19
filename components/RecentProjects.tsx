@@ -13,14 +13,14 @@ const RecentProjects = () => {
       </h1>
 
       {/* project cards */}
-
       <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
         {projects.map(({ id, title, des, img, iconLists, link }) => (
           <div
             key={id}
             className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
           >
-            <PinContainer title={link} href={link}>
+            {/* Use "Link" as the title, but keep the actual href */}
+            <PinContainer title="Link" href={link}>
               <Link href={link} passHref>
                 <div
                   className="relative flex items-center justify-center sm:w-[570px] w-[80vw]
@@ -30,9 +30,19 @@ const RecentProjects = () => {
                     className="relative w-full h-full overflow-hidden lg:rounded-3xl
             bg-[#13162d]"
                   >
-                    <img src="/bg.png" alt="bg-img" />
+                    {/* Background image */}
+                    <img
+                      src="/bg.png"
+                      alt="bg-img"
+                      className="absolute top-0 left-0 w-full h-full object-cover"
+                    />
                   </div>
-                  <img src={img} alt={title} className="z-10 absolute bottom-0" />
+                  {/* Project image */}
+                  <img
+                    src={img}
+                    alt={title}
+                    className="z-10 absolute bottom-0 object-cover w-full h-full"
+                  />
                 </div>
               </Link>
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
@@ -43,6 +53,7 @@ const RecentProjects = () => {
                 {des}
               </p>
 
+              {/* PROJECTS ICON SECTION */}
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
                   {iconLists.map((icon, index) => (

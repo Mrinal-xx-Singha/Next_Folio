@@ -50,7 +50,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a JS library",
+    title: "Currently Learning MERN Stack ,Next.js Full Stack Enthuciast",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -75,7 +75,7 @@ export const projects = [
     id: 1,
     title: "Delice",
     des: "Engineered a sophisticated FoodRecipe MultiPage WebApplication leveraging React.js for optimal UI/UX design,",
-    img: "/delice1.png",
+    img: "/Delice1.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     link: "https://react-redux-teal.vercel.app/",
   },
@@ -102,6 +102,30 @@ export const projects = [
     img: "/Netflix.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://netflix-ui-green.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "Pinit",
+    des: "The Coolest Sticky notes taking app",
+    img: "/pinit.png",
+    iconLists: [],
+    link: "https://sticky-notes-lime-eight.vercel.app/",
+  },
+  {
+    id: 6,
+    title: "Manime",
+    des: "The Coolest Sticky notes taking app",
+    img: "/manime.png",
+    iconLists: ["/next.svg","/tail.svg","/ts.svg","three.svg"],
+    link: "https://manime-delta.vercel.app/",
+  },
+  {
+    id: 7,
+    title: "Gericht",
+    des: "A UI/UX Landing Page for restraunt",
+    img: "/gericht.png",
+    iconLists: ["/next.svg","/tail.svg","/ts.svg","three.svg"],
+    link: "https://64b768cd68eede43a7ccdbfa--voluble-sopapillas-b0df76.netlify.app/",
   },
 ];
 
