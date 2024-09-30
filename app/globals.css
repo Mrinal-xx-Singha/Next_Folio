@@ -4,86 +4,113 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: 0 0% 100%; /* Pure white background for light mode */
+    --foreground: 240 10% 3.9%; /* Darker text color for readability */
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card: 0 0% 100%; /* White cards in light mode */
+    --card-foreground: 240 10% 3.9%; /* Text color on cards */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%; /* Light popover background */
+    --popover-foreground: 240 10% 3.9%; /* Dark popover text color */
 
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 240 5.9% 10%; /* Darker primary elements */
+    --primary-foreground: 0 0% 98%; /* Light text on primary elements */
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 240 4.8% 95.9%; /* Softer secondary background */
+    --secondary-foreground: 240 5.9% 10%; /* Dark text on secondary elements */
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 240 4.8% 95.9%; /* Muted light color */
+    --muted-foreground: 240 3.8% 46.1%; /* Softer contrast for muted foreground */
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 240 4.8% 95.9%; /* Light accent background */
+    --accent-foreground: 240 5.9% 10%; /* Darker text for accent elements */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%; /* Strong red for destructive actions */
+    --destructive-foreground: 0 0% 98%; /* Light text on destructive elements */
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
+    --border: 240 5.9% 90%; /* Light border for form elements */
+    --input: 240 5.9% 90%; /* Light input fields */
+    --ring: 240 10% 3.9%; /* Focus ring color */
 
-    --radius: 0.5rem;
+    --radius: 0.5rem; /* Standard border-radius */
   }
 
+  /* Dark mode variables */
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 240 10% 3.9%; /* Dark background for dark mode */
+    --foreground: 0 0% 98%; /* Light text for dark mode */
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 240 10% 3.9%; /* Dark cards in dark mode */
+    --card-foreground: 0 0% 98%; /* Light text on dark cards */
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%; /* Dark popover background */
+    --popover-foreground: 0 0% 98%; /* Light popover text */
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 0 0% 98%; /* Light primary color for dark mode */
+    --primary-foreground: 240 5.9% 10%; /* Dark text on primary elements */
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%; /* Darker secondary background */
+    --secondary-foreground: 0 0% 98%; /* Light text on secondary elements */
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 240 3.7% 15.9%; /* Muted dark color */
+    --muted-foreground: 240 5% 64.9%; /* Soft contrast for muted text */
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 240 3.7% 15.9%; /* Darker accent color */
+    --accent-foreground: 0 0% 98%; /* Light text for accents */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%; /* Darker red for destructive actions */
+    --destructive-foreground: 0 0% 98%; /* Light text on destructive elements */
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 240 3.7% 15.9%; /* Darker border for forms */
+    --input: 240 3.7% 15.9%; /* Darker input fields */
+    --ring: 240 4.9% 83.9%; /* Focus ring in dark mode */
   }
 }
 
 @layer base {
   * {
-    @apply border-border !scroll-smooth;
+    @apply border-border !scroll-smooth; /* Apply consistent border and smooth scroll */
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground; /* Background and text color based on theme */
   }
+
   button {
-    @apply active:outline-none;
+    @apply active:outline-none; /* Remove outline for active buttons */
   }
 }
 
 @layer utilities {
   .heading {
-    @apply font-bold text-4xl md:text-5xl text-center;
+    @apply font-bold text-4xl md:text-5xl text-center; /* Responsive heading size */
   }
 
   .black-gradient {
-    background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
+    background: linear-gradient(90deg, #2e2d2d 0%, #000000 100%); /* Gradient background */
+  }
+
+  .card {
+    @apply bg-card text-card-foreground p-6 rounded-lg shadow-lg; /* Utility class for card components */
+  }
+
+  .popover {
+    @apply bg-popover text-popover-foreground p-4 rounded-md shadow-md; /* Utility class for popovers */
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-opacity-90 transition; /* Primary button style */
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground px-4 py-2 rounded-md hover:bg-opacity-80 transition; /* Secondary button style */
+  }
+
+  .muted-text {
+    @apply text-muted-foreground; /* Text color for muted elements */
+  }
+
+  .input-field {
+    @apply bg-input border-border text-foreground p-2 rounded-md focus:ring-2 focus:ring-ring; /* Styling for input fields */
   }
 }

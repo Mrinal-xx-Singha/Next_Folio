@@ -21,8 +21,10 @@ const Approach = () => {
             containerClassName="bg-emerald-900"
           />
         </Card>
-        <Card title="Development & Updates" icon={<AceternityIcon order="Stage2" />}
-        description="Once we mulually agree on the plan ,I will start diving into coding .From initial sketches to polished code , I keep you updated everyt step of the way"
+        <Card
+          title="Development & Updates"
+          icon={<AceternityIcon order="Stage2" />}
+          description="Once we mulually agree on the plan ,I will start diving into coding .From initial sketches to polished code , I keep you updated everyt step of the way"
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -33,10 +35,11 @@ const Approach = () => {
             ]}
             dotSize={2}
           />
-         
         </Card>
-        <Card title="Deployment & Launch" icon={<AceternityIcon order="Stage3" />}
-        description="This is where the magic happens !Based on the approved design . I'll translate everything into functional code, building your website from ground up"
+        <Card
+          title="Deployment & Launch"
+          icon={<AceternityIcon order="Stage3" />}
+          description="This is where the magic happens !Based on the approved design . I'll translate everything into functional code, building your website from ground up"
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -53,7 +56,7 @@ const Card = ({
   title,
   icon,
   children,
-  description
+  description,
 }: {
   title: string;
   icon: React.ReactNode;
@@ -91,8 +94,9 @@ const Card = ({
         <h2 className="dark:text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
           {title}
         </h2>
-        <h2 className= "text-sm dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center"
-        style={{color:"#e4ecff"}}
+        <h2
+          className="text-sm dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center"
+          style={{ color: "#e4ecff" }}
         >
           {description}
         </h2>
@@ -106,7 +110,7 @@ const AceternityIcon = ({ order }: { order: string }) => {
     <div>
       <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950  text-2xl font-bold px-5 py-2 text-white backdrop-blur-3xl">
+        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#121111]  text-2xl font-bold px-5 py-2 text-white backdrop-blur-3xl">
           {order}
         </span>
       </button>

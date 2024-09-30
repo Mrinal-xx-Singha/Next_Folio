@@ -32,7 +32,7 @@ const RecentProjects = () => {
                   >
                     {/* Background image */}
                     <img
-                      src="/bg.png"
+                      src="/bg.jpg"
                       alt="bg-img"
                       className="absolute top-0 left-0 w-full h-full object-cover"
                     />

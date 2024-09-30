@@ -20,28 +20,35 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1rem", // Responsive padding for smaller screens
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem", // Large screens padding
+      },
       screens: {
-        "2xl": "1400px",
+        "2xl": "1400px", // Container width for 2xl screens
       },
     },
     extend: {
       colors: {
         black: {
-          DEFAULT: "#000",
-          100: "#000319",
-          200: "rgba(17, 25, 40, 0.75)",
-          300: "rgba(255, 255, 255, 0.125)",
+          DEFAULT: "#000000", // Solid black
+          100: "#121111", // Slightly lighter black for UI accents
+          200: "rgba(17, 25, 40, 0.75)", // Semi-transparent black for overlays
+          300: "rgba(0, 0, 0, 0.125)", // Light black, useful for subtle shadows
         },
         white: {
-          DEFAULT: "#FFF",
-          100: "#BEC1DD",
-          200: "#C1C2D3",
+          DEFAULT: "#FFFFFF", // Pure white
+          100: "#F5F5F5", // Light grey for backgrounds
+          200: "#EAEAEA", // Slightly darker for secondary areas
         },
         blue: {
-          "100": "#E4ECFF",
+          100: "#E4ECFF", // Pastel blue for soft UI elements
+          200: "#A0BFFF", // Deeper blue for primary accents
         },
-        purple: "#CBACF9",
+        purple: "#CBACF9", // Light purple accent color
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -77,9 +84,9 @@ const config = {
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "var(--radius)", // Large radius for buttons/cards
+        md: "calc(var(--radius) - 2px)", // Medium radius for inputs
+        sm: "calc(var(--radius) - 4px)", // Small radius for finer details
       },
       keyframes: {
         "accordion-down": {
@@ -97,7 +104,7 @@ const config = {
           },
           "100%": {
             opacity: "1",
-            transform: "translate(-50%,-40%) scale(1)",
+            transform: "translate(-50%, -40%) scale(1)",
           },
         },
         shimmer: {
@@ -150,18 +157,18 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        spotlight: "spotlight 2s ease .75s 1 forwards",
-        shimmer: "shimmer 2s linear infinite",
-        first: "moveVertical 30s ease infinite",
-        second: "moveInCircle 20s reverse infinite",
-        third: "moveInCircle 40s linear infinite",
-        fourth: "moveHorizontal 40s ease infinite",
-        fifth: "moveInCircle 20s ease infinite",
-        scroll:
-          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        spotlight: "spotlight 2s ease 0.75s forwards", // Smooth spotlight effect
+        shimmer: "shimmer 2s linear infinite", // Infinite shimmer for loading states
+        first: "moveVertical 30s ease infinite", // Vertical movement animation
+        second: "moveInCircle 20s reverse infinite", // Circular movement in reverse
+        third: "moveInCircle 40s linear infinite", // Slow continuous circular movement
+        fourth: "moveHorizontal 40s ease infinite", // Horizontal movement
+        fifth: "moveInCircle 20s ease infinite", // Continuous circle movement
+        scroll: "scroll 40s linear infinite", // Smooth scrolling effect
       },
     },
   },
+
   plugins: [
     require("tailwindcss-animate"),
     addVariablesForColors,

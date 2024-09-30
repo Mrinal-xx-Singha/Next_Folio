@@ -1,4 +1,3 @@
-
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -14,7 +13,7 @@ export const gridItems = [
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "/bg.jpg",
     spareImg: "",
   },
   {
@@ -73,22 +72,30 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Delice",
-    des: "Engineered a sophisticated FoodRecipe MultiPage WebApplication leveraging React.js for optimal UI/UX design,",
-    img: "/Delice1.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://react-redux-teal.vercel.app/",
+    title: "Video Box",
+    des: "Built with the robust MERN stack, Cineverse ensures seamless performance, real-time updates, and a secure user experience with JWT authentication.. ",
+    img: "/cineVerse.png",
+    iconLists: ["/javascript.svg", "/mongodb.svg", "/nodejs.svg", "/re.svg", "/express-js.svg"],
+    link: "https://cineverse-rgh2.onrender.com/",
   },
   {
     id: 2,
-    title: "Mrinal Tube",
-    des: "A video searching and playing web application which lets you see videos of creators.",
-    img: "/Youtube.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://main--remarkable-choux-7fefb8.netlify.app/",
+    title: "Delice",
+    des: "Engineered a sophisticated FoodRecipe MultiPage WebApplication leveraging React.js for optimal UI/UX design,",
+    img: "/Delice1.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg"],
+    link: "https://react-redux-teal.vercel.app/",
   },
   {
     id: 3,
+    title: "Video Box",
+    des: "A video searching and playing web application which lets you see videos of creators.",
+    img: "/videobox1.png",
+    iconLists: ["/javascript.svg", "/material-ui.svg", "/rapidapi.svg", "/re.svg"],
+    link: "https://main--remarkable-choux-7fefb8.netlify.app/",
+  },
+  {
+    id: 4,
     title: "Mrinals Metaverse",
     des: "Metaverse is a new thing in the future, where you can enjoy the virtual world by feeling like it's really real, you can feel what you feel in this metaverse world, because this is really the madness of the metaverseof today, using only VR devices you can easily explore the metaverse world you want, turn your dreams into reality.",
     img: "/Metaversus1.png",
@@ -96,19 +103,11 @@ export const projects = [
     link: "https://64d907c3aee17330c78eff62--peppy-chimera-b2544c.netlify.app/",
   },
   {
-    id: 4,
-    title: "Netflix UI",
-    des: "Recreated the Netflix website. ",
-    img: "/Netflix.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://netflix-ui-green.vercel.app/",
-  },
-  {
     id: 5,
     title: "Pinit",
     des: "The Coolest Sticky notes taking app",
     img: "/pinit.png",
-    iconLists: [],
+    iconLists: ['/re.svg','/appwrite.svg'],
     link: "https://sticky-notes-lime-eight.vercel.app/",
   },
   {
@@ -116,7 +115,7 @@ export const projects = [
     title: "Manime",
     des: "The Coolest Sticky notes taking app",
     img: "/manime.png",
-    iconLists: ["/next.svg","/tail.svg","/ts.svg","three.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
     link: "https://manime-delta.vercel.app/",
   },
   {
@@ -124,7 +123,7 @@ export const projects = [
     title: "Gericht",
     des: "A UI/UX Landing Page for restraunt",
     img: "/gericht.png",
-    iconLists: ["/next.svg","/tail.svg","/ts.svg","three.svg"],
+    iconLists: ["/re.svg", "/tail.svg", "/javascript.svg", "three.svg"],
     link: "https://64b768cd68eede43a7ccdbfa--voluble-sopapillas-b0df76.netlify.app/",
   },
 ];
@@ -197,16 +196,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-    link: "https://github.com/Mrinal-xx-Singha"
+    link: "https://github.com/Mrinal-xx-Singha",
   },
   {
     id: 2,
     img: "/twit.svg",
-    link: "https://twitter.com/Mrinal__Singha"
+    link: "https://twitter.com/Mrinal__Singha",
   },
   {
     id: 3,
     img: "/link.svg",
-    link: "https://www.linkedin.com/in/mrinal-singha/"
+    link: "https://www.linkedin.com/in/mrinal-singha/",
   },
 ];

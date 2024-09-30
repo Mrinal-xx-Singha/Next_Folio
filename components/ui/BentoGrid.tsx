@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
@@ -6,7 +6,7 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import { GlobeDemo } from "./GridGlobe";
 import Lottie from "react-lottie";
 import { useState } from "react";
-import animationData from "@/data/confetti.json"
+import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 import { setTimeout } from "timers";
@@ -51,30 +51,30 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg: string;
 }) => {
+  const [copied, setCopied] = useState(false);
+  const [copiedResume, setCopiedResume] = useState(false);
 
-  const [copied,setCopied] =useState(false)
-  const [copiedResume,setCopiedResume] =useState(false)
+  const resumeLink =
+    "https://drive.google.com/file/d/1SiBL-vcrdLL4QdAVDmxlGKjsB9dIC2-p/view?usp=drive_link";
 
-  const resumeLink = "https://drive.google.com/file/d/1xl8YvJvtN6hPWwISO99c9xwvkt0wTurT/view?usp=sharing"
+  const handleCopyResume = () => {
+    navigator.clipboard
+      .writeText(resumeLink)
+      .then(() => {
+        setCopiedResume(true);
+        setTimeout(() => {
+          setCopiedResume(false);
+        }, 2000); //reset the copied state after 2 seconds
+      })
+      .catch((err) => {
+        console.log("Failed to coppy: ", err);
+      });
+  };
 
-  const handleCopyResume = ()=>{
-    navigator.clipboard.writeText(resumeLink)
-    .then(() =>{
-      setCopiedResume(true);
-      setTimeout(()=>{
-        setCopiedResume(false)
-      },2000) //reset the copied state after 2 seconds
-    })
-    .catch(err => {
-      console.log('Failed to coppy: ',err);
-      
-    })
-  }
-
-  const handleCopy =()=>{
-    navigator.clipboard.writeText('mrinalsingha17@gmail.com')
-    setCopied(true)
-  }
+  const handleCopy = () => {
+    navigator.clipboard.writeText("mrinalsingha17@gmail.com");
+    setCopied(true);
+  };
 
   return (
     <div
@@ -83,9 +83,9 @@ export const BentoGridItem = ({
         className
       )}
       style={{
-        background: "rgb(2,0,36)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(103,103,136,1) 26%, rgba(54,58,120,1) 100%)",
+        background: "rgb(10, 10, 10)", // A solid blackish base color
+        backgroundImage:
+          "linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(30,30,30,1) 26%, rgba(15,15,15,1) 100%)", // Updated black gradient
       }}
     >
       {/* img dives */}
@@ -95,12 +95,16 @@ export const BentoGridItem = ({
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center")}
+              className={cn(
+                imgClassName,
+                "object-cover object-center opacity-60"
+              )}
             />
           )}
         </div>
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
+          className={`absolute right-0 -bottom-5 ${
+            id === 5 && "w-full opacity-80"
           }`}
         >
           {spareImg && (
@@ -141,21 +145,21 @@ export const BentoGridItem = ({
                 {["React.js", "Next.js", "Typescript"].map((item, i) => (
                   <span
                     key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#121111]"
                   >
                     {item}
                   </span>
                 ))}
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#121111]"></span>
               </div>
               <div className="flex flex-col md:gap-3 gap-3 lg:gap-2">
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#121111]"></span>
 
                 {["Express", "MongoDB", "Javascript"].map((item, i) => (
                   <span
                     key={i}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    lg:opacity-100 rounded-lg text-center bg-[#121111]"
                   >
                     {item}
                   </span>
@@ -164,36 +168,38 @@ export const BentoGridItem = ({
             </div>
           )}
 
-          {id === 6 &&(
+          {id === 6 && (
             <div className="mt-5 relative ">
-              <div className={`absolute -bottom-5 right-0`}
-              >
-                <Lottie options={{
-                  loop: copied,
+              <div className={`absolute -bottom-5 right-0`}>
+                <Lottie
+                  options={{
+                    loop: copied,
 
-                  autoplay:copied,
-                  animationData: animationData,
-                  rendererSettings:{
-                    preserveAspectRatio: 'xMidYMid slice',
-                  }
-                }} />
+                    autoplay: copied,
+                    animationData: animationData,
+                    rendererSettings: {
+                      preserveAspectRatio: "xMidYMid slice",
+                    },
+                  }}
+                />
               </div>
 
-              <MagicButton 
-              title={copied ? "Email Copied" : "Copy my email"}
-
-              icon={<IoCopyOutline />}
-              position="left"
-              otherClasses="!bg-[#161a31]"
-              handleClick={handleCopy}
-              />
-              <MagicButton
-              title={copiedResume ? "Resume Copied" : "Copy my resume"}
-              icon={<IoCopyOutline />}
-              position="left"
-               otherClasses="!bg-[#161a31]"
-               handleClick={handleCopyResume}
-              />
+              <div>
+                <MagicButton
+                  title={copied ? "Email Copied" : "Copy my email"}
+                  icon={<IoCopyOutline />}
+                  position="left"
+                  otherClasses="!bg-[#121111]"
+                  handleClick={handleCopy}
+                />
+                <MagicButton
+                  title={copiedResume ? "Resume Copied" : "Copy my resume"}
+                  icon={<IoCopyOutline />}
+                  position="left"
+                  otherClasses="!bg-[#121111]"
+                  handleClick={handleCopyResume}
+                />
+              </div>
             </div>
           )}
         </div>
