@@ -16,14 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="icon" href="/favlogo.png" />
       <body className={inter.className}>
       <ThemeProvider
             attribute="class"
             defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
-          >
-            {children}
+          >{children}
           </ThemeProvider>
         </body>
     </html>

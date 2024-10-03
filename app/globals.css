@@ -87,7 +87,11 @@
   }
 
   .black-gradient {
-    background: linear-gradient(90deg, #2e2d2d 0%, #000000 100%); /* Gradient background */
+    background: linear-gradient(
+      90deg,
+      #2e2d2d 0%,
+      #000000 100%
+    ); /* Gradient background */
   }
 
   .card {
