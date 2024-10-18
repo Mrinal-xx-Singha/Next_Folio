@@ -72,7 +72,7 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Video Box",
+    title: "Cineverse",
     des: "Built with the robust MERN stack, Cineverse ensures seamless performance, real-time updates, and a secure user experience with JWT authentication.. ",
     img: "/cineVerse.png",
     iconLists: ["/javascript.svg", "/mongodb.svg", "/nodejs.svg", "/re.svg", "/express-js.svg"],
@@ -80,6 +80,14 @@ export const projects = [
   },
   {
     id: 2,
+    title: "Spend Smart",
+    des: "A Modern expense tracker webapp",
+    img: "/spends.png",
+    iconLists: ["/next.svg", "/tail.svg", "/javascript.svg", "c.svg","neon.svg","drizzle.svg","lucid.svg","/elephant.png"],
+    link: "https://spend-smart-flax.vercel.app/",
+  },
+  {
+    id: 3,
     title: "Delice",
     des: "Engineered a sophisticated FoodRecipe MultiPage WebApplication leveraging React.js for optimal UI/UX design,",
     img: "/Delice1.png",
@@ -87,7 +95,7 @@ export const projects = [
     link: "https://react-redux-teal.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Video Box",
     des: "A video searching and playing web application which lets you see videos of creators.",
     img: "/videobox1.png",
@@ -95,7 +103,7 @@ export const projects = [
     link: "https://main--remarkable-choux-7fefb8.netlify.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Mrinals Metaverse",
     des: "Metaverse is a new thing in the future, where you can enjoy the virtual world by feeling like it's really real, you can feel what you feel in this metaverse world, because this is really the madness of the metaverseof today, using only VR devices you can easily explore the metaverse world you want, turn your dreams into reality.",
     img: "/Metaversus1.png",
@@ -103,7 +111,7 @@ export const projects = [
     link: "https://64d907c3aee17330c78eff62--peppy-chimera-b2544c.netlify.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Pinit",
     des: "The Coolest Sticky notes taking app",
     img: "/pinit.png",
@@ -111,7 +119,7 @@ export const projects = [
     link: "https://sticky-notes-lime-eight.vercel.app/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Manime",
     des: "The Coolest Sticky notes taking app",
     img: "/manime.png",
@@ -119,7 +127,7 @@ export const projects = [
     link: "https://manime-delta.vercel.app/",
   },
   {
-    id: 7,
+    id: 8,
     title: "Gericht",
     des: "A UI/UX Landing Page for restraunt",
     img: "/gericht.png",

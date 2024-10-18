@@ -55,22 +55,28 @@ export const BentoGridItem = ({
   const [copiedResume, setCopiedResume] = useState(false);
 
   const resumeLink =
-    "https://drive.google.com/file/d/1SiBL-vcrdLL4QdAVDmxlGKjsB9dIC2-p/view?usp=drive_link";
+    "https://drive.google.com/file/d/1p6X7b03YdE3o459_SoTbH7-Mvwm1Wk5c/view?usp=drive_link";
 
-  const handleCopyResume = () => {
+  const handleCopyResume = (event) => {
+    // Prevent the default button behavior
+    event.preventDefault();
+
+    // Open the resume link in a new tab
+    window.open(resumeLink, "_blank");
+
+    // Copy the resume link to clipboard
     navigator.clipboard
       .writeText(resumeLink)
       .then(() => {
         setCopiedResume(true);
         setTimeout(() => {
           setCopiedResume(false);
-        }, 2000); //reset the copied state after 2 seconds
+        }, 2000); // Reset the copied state after 2 seconds
       })
       .catch((err) => {
-        console.log("Failed to coppy: ", err);
+        console.log("Failed to copy: ", err);
       });
   };
-
   const handleCopy = () => {
     navigator.clipboard.writeText("mrinalsingha17@gmail.com");
     setCopied(true);
@@ -193,7 +199,7 @@ export const BentoGridItem = ({
                   handleClick={handleCopy}
                 />
                 <MagicButton
-                  title={copiedResume ? "Resume Copied" : "Copy my resume"}
+                  title={copiedResume ? "Resume Copied" : "Copy & Open Resume"}
                   icon={<IoCopyOutline />}
                   position="left"
                   otherClasses="!bg-[#121111]"
