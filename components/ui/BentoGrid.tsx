@@ -54,11 +54,11 @@ export const BentoGridItem = ({
   const [copiedResume, setCopiedResume] = useState(false);
 
   const resumeLink =
-    "https://drive.google.com/file/d/1p6X7b03YdE3o459_SoTbH7-Mvwm1Wk5c/view?usp=drive_link";
+    "https://drive.google.com/file/d/1OZAraHdln6vE-SXX6A_q1BabU2lJ53vo/view?usp=drive_link";
 
   const handleCopyResume = () => {
     const resumeLink =
-      "https://drive.google.com/file/d/1p6X7b03YdE3o459_SoTbH7-Mvwm1Wk5c/view?usp=drive_link";
+      "https://drive.google.com/file/d/1OZAraHdln6vE-SXX6A_q1BabU2lJ53vo/view?usp=drive_link";
 
     // Open the resume link in a new tab
     window.open(resumeLink, "_blank");

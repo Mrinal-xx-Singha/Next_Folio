@@ -6,7 +6,8 @@ import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { navItems } from "@/data";
 import Approach from "@/components/Approach";
 import Footer from "@/components/Footer";
-
+import TechStack from "@/components/TechStack"
+import Clients from "@/components/Clients";
 export default function Home() {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col  mx-auto sm:px-10 px-5 overflow-clip">
@@ -14,7 +15,9 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
        <Hero />
        <Grid />
+       <TechStack />
        <RecentProjects />
+       <Clients />
        <Approach />
        <Footer />
       </div>
