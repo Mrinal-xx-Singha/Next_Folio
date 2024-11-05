@@ -10,6 +10,7 @@ const Clients = () => {
       </h1>
       <div className="flex flex-col items-center max-lg:mt-10">
         <InfiniteMovingCards
+          className="mt-2"
           direction="right"
           speed="slow"
           items={testimonials}
