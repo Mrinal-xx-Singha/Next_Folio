@@ -75,7 +75,7 @@ export const projects = [
     id: 1,
     title: "ClearCut",
     des: "Remove backgrounds from any image in just one click with Fotor AI background remover Make transparent backgrounds instantly for free! ",
-    img: "/ClearCut.png",
+    img: "/clearCut.png",
     iconLists: [
       "/javascript.svg",
       "/mongodb.svg",
@@ -241,7 +241,7 @@ export const companies = [
   {
     id: 5,
     name: "ClearCut.",
-    img: "/ClearCut.png",
+    img: "/clearCut.png",
     nameImg: "ClearCut",
   },
 ];
