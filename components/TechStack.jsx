@@ -18,7 +18,7 @@ const TechStack = () => {
     { id: 10, image: "/drizzle.svg", label: "Drizzle" },
     { id: 11, image: "/lucid.svg", label: "Lucid" },
     { id: 12, image: "/elephant.png", label: "Postgres" },
-    { id: 13, image: "/tS.svg", label: "TypeScript" },
+    { id: 13, image: "/ts.svg", label: "TypeScript" },
     { id: 14, image: "/fm.svg", label: "Framer Motion" },
     { id: 15, image: "/appwrite.svg", label: "Appwrite" },
     { id: 16, image: "/material-ui.svg", label: "Material UI" },

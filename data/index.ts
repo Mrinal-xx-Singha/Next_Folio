@@ -135,7 +135,7 @@ export const projects = [
       "/rapidapi.svg",
       "/re.svg",
     ],
-    link: "https://main--remarkable-choux-7fefb8.netlify.app/",
+    link: "https://video-box-5msi.vercel.app/",
   },
   {
     id: 6,
