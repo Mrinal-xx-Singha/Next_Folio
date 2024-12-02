@@ -54,11 +54,11 @@ export const BentoGridItem = ({
   const [copiedResume, setCopiedResume] = useState(false);
 
   const resumeLink =
-    "https://drive.google.com/file/d/1OZAraHdln6vE-SXX6A_q1BabU2lJ53vo/view?usp=drive_link";
+    "https://drive.google.com/file/d/1TamHd7PUMrC5rGLsj6hMX2Sw1_zZnVmf/view?usp=sharing";
 
   const handleCopyResume = () => {
     const resumeLink =
-      "https://drive.google.com/file/d/1OZAraHdln6vE-SXX6A_q1BabU2lJ53vo/view?usp=drive_link";
+      "https://drive.google.com/file/d/1TamHd7PUMrC5rGLsj6hMX2Sw1_zZnVmf/view?usp=sharing";
 
     // Open the resume link in a new tab
     window.open(resumeLink, "_blank");
@@ -193,7 +193,7 @@ export const BentoGridItem = ({
                   handleClick={handleCopy}
                 />
                 <MagicButton
-                  title={copiedResume ? "Resume Copied" : "Copy & Open Resume"}
+                  title={copiedResume ? "Resume Copied" : "View Resume"}
                   icon={<IoCopyOutline />}
                   position="left"
                   otherClasses="!bg-[#121111]"

@@ -23,6 +23,7 @@ const TechStack = () => {
     { id: 15, image: "/appwrite.svg", label: "Appwrite" },
     { id: 16, image: "/material-ui.svg", label: "Material UI" },
     { id: 17, image: "/three.svg", label: "Three.js" },
+    { id: 18, image: "/socket.svg", label: "Socket.io" },
   ];
 
   return (
